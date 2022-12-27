@@ -10,7 +10,7 @@ packages = [{include = "test_github_actions"}]
 python = "^3.8"
 
 [tool.poetry.group.dev.dependencies]
-# Get the latest revision on the branch named "next"
+# Get the latest revision on the branch named "develop"
 poetry-versioning = { git = "git@github.com:ehn-jloarca/poetry-versioning.git", branch = "develop" }
 
 [build-system]
