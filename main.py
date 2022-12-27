@@ -1,6 +1,10 @@
 
 
 def foo():
+    """
+    foo
+    :return: bar
+    """
     return 'bar'
 
 
