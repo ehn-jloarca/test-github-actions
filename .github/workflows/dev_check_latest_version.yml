@@ -1,0 +1,34 @@
+name: Dev check latest version
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+    #----------------------------------------------
+    #       check-out repo and set-up python
+    #----------------------------------------------
+    - name: Check out repository
+      uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    #----------------------------------------------
+    #  -----  install & configure poetry  -----
+    #----------------------------------------------
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+    #----------------------------------------------
+    #  ---  execute the "update" shell script  ---
+    #----------------------------------------------
+    - name: Run update script
+      run: ./.github/scripts/update.sh
+      shell: bash
