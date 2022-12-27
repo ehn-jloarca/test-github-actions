@@ -30,5 +30,7 @@ jobs:
     #  ---  execute the "update" shell script  ---
     #----------------------------------------------
     - name: Run update script
-      run: ./.github/scripts/update.sh
+      run: |
+        chmod +x ./.github/scripts/update.sh
+        ./.github/scripts/update.sh
       shell: bash
