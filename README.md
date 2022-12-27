@@ -1,1 +1,1 @@
-Added some content to create a new commit
+Added some content to create a new commit.
