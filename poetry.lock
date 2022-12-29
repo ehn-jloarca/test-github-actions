@@ -42,7 +42,7 @@ requests = "^2.28.1"
 type = "git"
 url = "git@github.com:ehn-jloarca/poetry-versioning.git"
 reference = "develop"
-resolved_reference = "9299c47a64e7bdb25d90a2d7a0ea20587d8ec4db"
+resolved_reference = "c3ca906a2d30d94df39f2670ae0dbc7a7f63d047"
 
 [[package]]
 name = "pytz"
